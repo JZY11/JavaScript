@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var patt1 = /e/;//new RegExp('e); //patten模式
+    console.log(patt1.test("hello"));
+    var patt2 = /l/g; // global 全部
+    var result = patt1.exec("hello");
+    do{
+        console.log(result);
+        result = patt1.exec("hello");
+    }while (result != null);
+
+    var patt3 = /e/i; // i 不区分大小写
+    console.log(patt3.test('HELLO'));
+
+    var patt4 = /w3school/i;
+    console.log('Visit W3School'.match(patt4))
+</script>
+</body>
+</html>

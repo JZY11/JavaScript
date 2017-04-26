@@ -6,12 +6,12 @@
     <style>
         table{
             border-collapse:collapse;}
-        td{border: 1px solid #000}
+        td{border: 1px solid #000; padding:10px}
     </style>
 </head>
 <body>
 <script>
-    // 边框加在td标签上，默认为双边框  清除双边框加在table标签上：border-collapse:collapse
+    // 边框加在单元格上td标签上，默认为双边框  边框合并加在table标签上：border-collapse:collapse
     var strTable = '<table>';
     for(i = 1; i < 10; i++){
         strTable += '<tr>';//  新行开始

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse:collapse;}
+        td{border: 1px solid #000}
+    </style>
+</head>
+<body>
+<script>
+    // 边框加在td标签上，默认为双边框  清除双边框加在table标签上：border-collapse:collapse
+    var strTable = '<table>';
+    for(i = 1; i < 10; i++){
+        strTable += '<tr>';//  新行开始
+        for(j = 1; j <= i; j++){
+            strTable += '<td>'; // <td>与</td>之间为单元格里的内容
+            var ji = j * i;
+            var date = j + 'x' + i + '=' + ji;// 将临时拼接出来的字符串存入变量date
+            strTable += date;
+            strTable += '</td>';
+        }
+        strTable += '</tr>';
+    }
+    strTable += '</table>';
+    document.write(strTable)
+</script>
+</body>
+</html>

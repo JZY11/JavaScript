@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        var patt = /\./g;// .查找单个字符，除了换行和行结束符
+        console.log('a.cks.csh.'.match(patt));
+        patt.compile(/\w/g);
+        console.log('Give 100%!'.match(patt))
+    </script>
 </head>
 <body>
 

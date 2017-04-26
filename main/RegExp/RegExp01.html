@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        var patt = /[0-9]/g;
+        var patt = /[A-z0-9]/gi;
         console.log('afWsda235'.match(patt));
+        patt.compile('red|Green|blue','');
+        console.log('redGreenBlue'.match(patt))
     </script>
 </head>
 <body>

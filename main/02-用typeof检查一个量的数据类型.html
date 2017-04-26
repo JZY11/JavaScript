@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 10;
+    var b = '10';
+    var c = true;
+    var d;
+    var e = null;
+    var f = {};
+    console.log(typeof(a));
+    console.log(typeof(b));
+    console.log(typeof(c));
+    console.log(typeof(d));
+    // null类型用typeof运算符检查时，得到的字符串与类型不一致，而是不正确的'object'
+    console.log(typeof(e));
+    console.log(typeof(f));
+    if(typeof (a) === "number"){
+        console.log("是数值类型的")
+    }
+    if(typeof (b) === "string"){
+        console.log("是字符串类型的")
+    }
+</script>
+</body>
+</html>

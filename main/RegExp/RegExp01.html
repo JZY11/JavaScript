@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        var patt = /[A-z0-9]/gi;
+        var patt = /[A-z0-9]/gi;// /[^0-9]/g
         console.log('afWsda235'.match(patt));
         patt.compile('red|Green|blue','');
-        console.log('redGreenBlue'.match(patt))
+        console.log('redGreenBlue'.match(patt));
+
+        patt.compile('[\u4e00-\u9fbb]','gi'); // [\u4e00-\u9fbb]所有数字
+        console.log('acacd免费换爱的安顿好福收款方还'.match(patt));
     </script>
 </head>
 <body>

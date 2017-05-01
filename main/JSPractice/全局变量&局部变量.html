@@ -6,16 +6,15 @@
 </head>
 <body>
 <script>
+    var c = 0;
     function add(a, b) {
-        var c = a + b;
+        c = a + b;
         if (c % 2 === 0) {
-            return c;// return;表示返回未定义
+            return c;
         }
-        alert(c);
     }
-    var i = add(4, 4);
-    alert(i);
-    add(59, 6);
+    add(2, 6);
+    alert(c);
 </script>
 </body>
 </html>

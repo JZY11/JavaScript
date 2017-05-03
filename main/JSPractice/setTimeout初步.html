@@ -7,12 +7,24 @@
 <body>
 <div id="box">10</div>
 <script>
+//    var i = 10;
+//    setTimeout(function () {
+//        i--;
+//        var box = document.getElementById('box');
+//        box.innerHTML = i;
+//    }, 1000)// 以上只能在延迟1s后调用匿名函数之后执行一次
+
+
+
+
     var i = 10;
-    setTimeout(function () {
+    function daoJiShi() {
         i--;
         var box = document.getElementById('box');
         box.innerHTML = i;
-    }, 1000)
+
+    }
+    setTimeout(daoJiShi,3000)
 </script>
 </body>
 </html>

@@ -16,13 +16,13 @@
 
 
 
-
+    // 改进以上代码
     var i = 10;
     function daoJiShi() {
         i--;
         var box = document.getElementById('box');
         box.innerHTML = i;
-
+        setTimeout(daoJiShi,3000);
     }
     setTimeout(daoJiShi,3000)
 </script>

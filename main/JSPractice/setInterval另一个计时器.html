@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #box{
+            font-size:4em;
+        }
+    </style>
 </head>
 <body>
-
+    <div id="box">10</div>
+    <script>
+        var t = 10;
+        function daoJiShi() {
+            t--;
+            var box = document.getElementById('box');
+            box.innerHTML = t;
+        }
+        setInterval(daoJiShi,1000);
+    </script>
 </body>
 </html>

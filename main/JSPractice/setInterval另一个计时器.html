@@ -13,12 +13,16 @@
     <div id="box">10</div>
     <script>
         var t = 10;
+        var timer = null;
         function daoJiShi() {
             t--;
             var box = document.getElementById('box');
             box.innerHTML = t;
+            if(t <= 0){
+                clearInterval(timer);
+            }
         }
-        setInterval(daoJiShi,1000);
+        timer = setInterval(daoJiShi,1000);// 直接在外面自带重复
     </script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn01{
+            margin-top:220px;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<button id="btn01">按钮</button>
+<script>
+    // 得到按钮
+    var btn01 = document.getElementById('btn01');
+    // 得到盒子
+    var box = document.getElementById('box');
+    // 下面几行设置盒子样式的初始样式
+    box.style.width = '200px';
+    box.style.height = '200px';
+    box.style.backgroundColor = 'red';
+    box.style.position = 'absolute';// 绝对定位的元素脱离文档流，所以按钮看不到了
+    box.style.top = '0px';
+    box.style.left = '0px';
+
+    // 声明全局变量，具有记忆功能，表示盒子的初始位置
+    var left = 0;
+    // 声明函数，实现盒子的移动
+    function move() {
+        left += 2;
+        box.style.left = left + 'px';//不加单位的话有的浏览器不兼容
+        if (left < 800) {
+            setTimeout(move, 20)
+        }
+    }
+
+    // 为按钮添加事件(点击)
+    btn01.onclick = function () {
+        setTimeout(move, 20);
+    }
+
+</script>
+
+</body>
+</html>
